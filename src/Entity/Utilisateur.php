@@ -42,6 +42,11 @@ class Utilisateur
      */
     private $Roles = [];
 
+    /**
+     * @ORM\OneToOne(targetEntity=Panier::class, mappedBy="Utilisateur", cascade={"persist", "remove"})
+     */
+    private $panier;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +108,23 @@ class Utilisateur
     public function setRoles(array $Roles): self
     {
         $this->Roles = $Roles;
+
+        return $this;
+    }
+
+    public function getPanier(): ?Panier
+    {
+        return $this->panier;
+    }
+
+    public function setPanier(Panier $panier): self
+    {
+        $this->panier = $panier;
+
+        // set the owning side of the relation if necessary
+        if ($panier->getUtilisateur() !== $this) {
+            $panier->setUtilisateur($this);
+        }
 
         return $this;
     }

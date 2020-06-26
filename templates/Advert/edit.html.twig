@@ -8,19 +8,19 @@
 
 {% block ocplatform_body %}
 
-  <h2>Modifier une annonce</h2>
+  <h2>Modifier un produit</h2>
 
   {{ include("Advert/form.html.twig") }}
 
   <p>
-    Vous éditez une annonce déjà existante, merci de ne pas changer
-    l'esprit général de l'annonce déjà publiée.
+    Vous éditez un produit déjà existant, merci de ne pas changer
+    l'esprit général du produit déjà publiée.
   </p>
 
   <p>
     <a href="{{ path('oc_platform_view', {'id': advert.id}) }}" class="btn btn-default">
       <i class="glyphicon glyphicon-chevron-left"></i>
-      Retour à l'annonce
+      Retour au produit
     </a>
   </p>
 

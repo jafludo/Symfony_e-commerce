@@ -227,6 +227,6 @@ class __TwigTemplate_4701ec5c751e0408a36881aef569129b80bd7345a417940dcec7801d8ca
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/exception.html.twig", "C:\\wamp64\\www\\symfonyecommerce\\Symfony_e-commerce\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\exception.html.twig");
+", "@WebProfiler/Collector/exception.html.twig", "C:\\wamp64\\www\\evalsymfony\\Symfony_e-commerce\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\exception.html.twig");
     }
 }

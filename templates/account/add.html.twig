@@ -3,14 +3,14 @@
 {% extends "layoutbundle.html.twig" %}
 
 {% block title %}
-  Ajouter un produit - {{ parent() }}
+  Créer un compte - {{ parent() }}
 {% endblock %}
 
 {% block ocplatform_body %}
 
-  <h2>Ajouter un produit</h2>
+  <h2>Créer un compte</h2>
 
-  {{ include("Advert/form.html.twig") }}
+  {{ include("Account/form.html.twig") }}
 
   <p>
     <a href="{{ path('oc_platform_home')}}" class="btn btn-default">

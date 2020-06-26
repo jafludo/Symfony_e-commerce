@@ -166,6 +166,6 @@ class __TwigTemplate_be9506e42a49c22e0de2acdeb4d314a94d3b61f568f761da46513b13f39
   {% block ocplatform_body %}
   {% endblock %}
 
-{% endblock %}", "layoutbundle.html.twig", "C:\\wamp64\\www\\symfonyecommerce\\Symfony_e-commerce\\templates\\layoutbundle.html.twig");
+{% endblock %}", "layoutbundle.html.twig", "C:\\wamp64\\www\\evalsymfony\\Symfony_e-commerce\\templates\\layoutbundle.html.twig");
     }
 }

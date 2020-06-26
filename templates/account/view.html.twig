@@ -1,0 +1,15 @@
+{# src/OC/PlatformBundle/Resources/view/Account/view.html.twig #}
+
+{% extends "layoutbundle.html.twig" %}
+
+{% block title %}
+  Lecture d'un utlisateur" - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>Prénom : {{ user.prenom }}</h2>
+  <h2>Nom : {{ user.nom }}</h2>
+  <h2>Email : {{ user.email }}</h2>
+
+{% endblock %}

@@ -25,4 +25,7 @@ return [
     'oc_advert_edit' => [['id'], ['_controller' => 'App\\Controller\\AdvertController::edit'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/edit']], [], []],
     'oc_advert_menu' => [[], ['_controller' => 'App\\Controller\\AdvertController::menuAction'], [], [['text', '/menu']], [], []],
     'account' => [[], ['_controller' => 'App\\Controller\\AccountController::index'], [], [['text', '/account']], [], []],
+    'connexion' => [[], ['_controller' => 'App\\Controller\\AccountController::connexion'], [], [['text', '/connexion']], [], []],
+    'create_account' => [[], ['_controller' => 'App\\Controller\\AccountController::register'], [], [['text', '/register']], [], []],
+    'oc_account_view' => [['id'], ['_controller' => 'App\\Controller\\AccountController::view'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/viewuser']], [], []],
 ];

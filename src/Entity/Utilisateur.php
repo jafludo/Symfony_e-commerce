@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\UtilisateurRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -46,6 +47,10 @@ class Utilisateur
      * @ORM\OneToOne(targetEntity=Panier::class, mappedBy="Utilisateur", cascade={"persist", "remove"})
      */
     private $panier;
+
+    public function __construct() {
+        $this->Panier = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {

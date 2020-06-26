@@ -66,9 +66,7 @@ class Advert
 
     public function __construct() {
         $this->datetime = new \Datetime();
-        $this->categories = new ArrayCollection();
         $this->applications = new ArrayCollection();
-        $this->Panier = new ArrayCollection();
     }
 
     public function getId(): ?int

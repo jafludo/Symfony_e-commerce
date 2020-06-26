@@ -1,0 +1,11 @@
+# config/packages/twig.yaml
+
+# …
+
+twig:
+    # …
+    default_path: '%kernel.project_dir%/templates'
+    globals:
+        webmaster: "%env(WEBMASTER)%"
+    form_themes:
+        - 'bootstrap_4_layout.html.twig'

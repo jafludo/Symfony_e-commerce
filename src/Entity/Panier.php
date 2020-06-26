@@ -33,6 +33,11 @@ class Panier
      */
     private $Etat;
 
+    /**
+     * @ORM\OneToOne(targetEntity=ContenuPanier::class, mappedBy="Panier", cascade={"persist", "remove"})
+     */
+    private $Quantite;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -70,6 +75,24 @@ class Panier
     public function setEtat(bool $Etat): self
     {
         $this->Etat = $Etat;
+
+        return $this;
+    }
+
+    public function getQuantite(): ?ContenuPanier
+    {
+        return $this->Quantite;
+    }
+
+    public function setQuantite(?ContenuPanier $Quantite): self
+    {
+        $this->Quantite = $Quantite;
+
+        // set (or unset) the owning side of the relation if necessary
+        $newPanier = null === $Quantite ? null : $this;
+        if ($Quantite->getPanier() !== $newPanier) {
+            $Quantite->setPanier($newPanier);
+        }
 
         return $this;
     }

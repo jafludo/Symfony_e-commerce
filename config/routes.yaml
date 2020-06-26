@@ -41,3 +41,7 @@ oc_advert_menu:
 account:
     path:       /account
     controller: App\Controller\AccountController::index
+
+connexion:
+    path:       /connexion
+    controller: App\Controller\AccountController::connexion

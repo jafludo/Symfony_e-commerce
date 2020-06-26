@@ -13,4 +13,11 @@ class AccountController extends AbstractController
             'controller_name' => 'AccountController',
         ]);
     }
+
+    public function connexion()
+    {
+        return $this->render('connexion/index.html.twig', [
+            'controller_name' => 'AccountController',
+        ]);
+    }
 }

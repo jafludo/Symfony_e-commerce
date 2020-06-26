@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\AdvertRepository;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -58,10 +59,16 @@ class Advert
      */
     private $applications;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=ContenuPanier::class, mappedBy="Advert")
+     */
+    private $Panier;
+
     public function __construct() {
         $this->datetime = new \Datetime();
         $this->categories = new ArrayCollection();
         $this->applications = new ArrayCollection();
+        $this->Panier = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -166,5 +173,33 @@ class Advert
     public function getApplications()
     {
         return $this->applications;
+    }
+
+    /**
+     * @return Collection|ContenuPanier[]
+     */
+    public function getPanier(): Collection
+    {
+        return $this->Panier;
+    }
+
+    public function addPanier(ContenuPanier $panier): self
+    {
+        if (!$this->Panier->contains($panier)) {
+            $this->Panier[] = $panier;
+            $panier->addAdvert($this);
+        }
+
+        return $this;
+    }
+
+    public function removePanier(ContenuPanier $panier): self
+    {
+        if ($this->Panier->contains($panier)) {
+            $this->Panier->removeElement($panier);
+            $panier->removeAdvert($this);
+        }
+
+        return $this;
     }
 }

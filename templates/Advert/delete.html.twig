@@ -1,0 +1,18 @@
+{# templates/Advert/index.html.twig #}
+{% extends "layoutbundle.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h3>Annonce supprimée</h3>
+
+  <p>
+    <a href="{{ path('oc_platform_home') }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à la liste
+    </a>
+  </p>
+{% endblock %}

@@ -1,3 +1,39 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+# config/routes.yaml
+
+oc_advert_index:
+    path:       /home
+    controller: App\Controller\AdvertController::index
+
+oc_platform_home:
+    path:       /home
+    controller:
+
+oc_platform_add:
+    path:       /home
+    controller:
+
+oc_platform_view:
+    path:       /view/{id}
+    controller: App\Controller\AdvertController::view
+    requirements:
+        id: '\d+'
+
+oc_advert_add:
+    path:       /add
+    controller: App\Controller\AdvertController::add
+
+oc_advert_delete:
+    path:       /delete/{id}
+    controller: App\Controller\AdvertController::delete
+    requirements:
+        id: '\d+'
+
+oc_advert_edit:
+    path:       /edit/{id}
+    controller: App\Controller\AdvertController::edit
+    requirements:
+        id: '\d+'
+
+oc_advert_menu:
+    path:       /menu
+    controller: App\Controller\AdvertController::menuAction

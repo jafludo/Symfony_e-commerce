@@ -37,3 +37,7 @@ oc_advert_edit:
 oc_advert_menu:
     path:       /menu
     controller: App\Controller\AdvertController::menuAction
+
+account:
+    path:       /account
+    controller: App\Controller\AccountController::index

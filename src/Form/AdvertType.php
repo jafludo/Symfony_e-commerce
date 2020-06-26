@@ -24,11 +24,6 @@ class AdvertType extends AbstractType
         ->add('content',   TextareaType::class)
         ->add('published', CheckboxType::class, array('required' => false))
         ->add('image',     ImageType::class, array('required' => false))
-        ->add('categories', CollectionType::class, array(
-            'entry_type'   => CategoryType::class,
-            'allow_add'    => true,
-            'allow_delete' => true
-          ))
         ->add('save',      SubmitType::class);
     }
 

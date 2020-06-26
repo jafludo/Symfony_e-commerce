@@ -45,3 +45,11 @@ account:
 connexion:
     path:       /connexion
     controller: App\Controller\AccountController::connexion
+
+create_account:
+    path:       /register
+    controller: App\Controller\AccountController::register
+
+oc_account_view:
+    path:       /viewuser/{id}
+    controller: App\Controller\AccountController::view

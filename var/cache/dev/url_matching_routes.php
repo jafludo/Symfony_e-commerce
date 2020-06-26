@@ -22,6 +22,8 @@ return [
         '/add' => [[['_route' => 'oc_advert_add', '_controller' => 'App\\Controller\\AdvertController::add'], null, null, null, false, false, null]],
         '/menu' => [[['_route' => 'oc_advert_menu', '_controller' => 'App\\Controller\\AdvertController::menuAction'], null, null, null, false, false, null]],
         '/account' => [[['_route' => 'account', '_controller' => 'App\\Controller\\AccountController::index'], null, null, null, false, false, null]],
+        '/connexion' => [[['_route' => 'connexion', '_controller' => 'App\\Controller\\AccountController::connexion'], null, null, null, false, false, null]],
+        '/register' => [[['_route' => 'create_account', '_controller' => 'App\\Controller\\AccountController::register'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -40,9 +42,12 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/view/(\\d+)(*:180)'
-                .'|/delete/(\\d+)(*:201)'
-                .'|/edit/(\\d+)(*:220)'
+                .'|/view(?'
+                    .'|/(\\d+)(*:183)'
+                    .'|user/([^/]++)(*:204)'
+                .')'
+                .'|/delete/(\\d+)(*:226)'
+                .'|/edit/(\\d+)(*:245)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -53,9 +58,10 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        180 => [[['_route' => 'oc_platform_view', '_controller' => 'App\\Controller\\AdvertController::view'], ['id'], null, null, false, true, null]],
-        201 => [[['_route' => 'oc_advert_delete', '_controller' => 'App\\Controller\\AdvertController::delete'], ['id'], null, null, false, true, null]],
-        220 => [
+        183 => [[['_route' => 'oc_platform_view', '_controller' => 'App\\Controller\\AdvertController::view'], ['id'], null, null, false, true, null]],
+        204 => [[['_route' => 'oc_account_view', '_controller' => 'App\\Controller\\AccountController::view'], ['id'], null, null, false, true, null]],
+        226 => [[['_route' => 'oc_advert_delete', '_controller' => 'App\\Controller\\AdvertController::delete'], ['id'], null, null, false, true, null]],
+        245 => [
             [['_route' => 'oc_advert_edit', '_controller' => 'App\\Controller\\AdvertController::edit'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

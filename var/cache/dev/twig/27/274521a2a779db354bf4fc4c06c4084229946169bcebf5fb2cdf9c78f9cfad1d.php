@@ -85,19 +85,27 @@ class __TwigTemplate_029a9bf452c4a618c5ab3d499e1d08d5860a7c38d653a560009c54354b4
         // line 30
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("account");
         echo "\">Mon compte</a></li>
+          <li><a href=\"";
+        // line 31
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("connexion");
+        echo "\">Se connecter</a></li>
+          <li><a href=\"";
+        // line 32
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("create_account");
+        echo "\">Créer un compte</a></li>
         </ul>
 
         <h4>Derniers produits</h4>
         ";
-        // line 34
+        // line 36
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\AdvertController::menuAction", ["limit" => 3]));
         echo "
       </div>
       <div id=\"content\" class=\"col-md-9\">
         ";
-        // line 37
-        $this->displayBlock('body', $context, $blocks);
         // line 39
+        $this->displayBlock('body', $context, $blocks);
+        // line 41
         echo "      </div>
     </div>
 
@@ -105,16 +113,16 @@ class __TwigTemplate_029a9bf452c4a618c5ab3d499e1d08d5860a7c38d653a560009c54354b4
 
     <footer>
       <p>The sky's the limit © ";
-        // line 45
+        // line 47
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo " and beyond.</p>
     </footer>
   </div>
 
   ";
-        // line 49
+        // line 51
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 54
+        // line 56
         echo "
 </body>
 </html>";
@@ -168,7 +176,7 @@ class __TwigTemplate_029a9bf452c4a618c5ab3d499e1d08d5860a7c38d653a560009c54354b4
 
     }
 
-    // line 37
+    // line 39
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -178,7 +186,7 @@ class __TwigTemplate_029a9bf452c4a618c5ab3d499e1d08d5860a7c38d653a560009c54354b4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 38
+        // line 40
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -188,7 +196,7 @@ class __TwigTemplate_029a9bf452c4a618c5ab3d499e1d08d5860a7c38d653a560009c54354b4
 
     }
 
-    // line 49
+    // line 51
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -198,9 +206,9 @@ class __TwigTemplate_029a9bf452c4a618c5ab3d499e1d08d5860a7c38d653a560009c54354b4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 50
+        // line 52
         echo "    ";
-        // line 51
+        // line 53
         echo "    <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>
     <script src=\"//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js\"></script>
   ";
@@ -224,7 +232,7 @@ class __TwigTemplate_029a9bf452c4a618c5ab3d499e1d08d5860a7c38d653a560009c54354b4
 
     public function getDebugInfo()
     {
-        return array (  204 => 51,  202 => 50,  192 => 49,  182 => 38,  172 => 37,  161 => 13,  159 => 12,  149 => 11,  130 => 9,  118 => 54,  116 => 49,  109 => 45,  101 => 39,  99 => 37,  93 => 34,  86 => 30,  82 => 29,  78 => 28,  63 => 15,  61 => 11,  56 => 9,  47 => 2,);
+        return array (  212 => 53,  210 => 52,  200 => 51,  190 => 40,  180 => 39,  169 => 13,  167 => 12,  157 => 11,  138 => 9,  126 => 56,  124 => 51,  117 => 47,  109 => 41,  107 => 39,  101 => 36,  94 => 32,  90 => 31,  86 => 30,  82 => 29,  78 => 28,  63 => 15,  61 => 11,  56 => 9,  47 => 2,);
     }
 
     public function getSourceContext()
@@ -259,6 +267,8 @@ class __TwigTemplate_029a9bf452c4a618c5ab3d499e1d08d5860a7c38d653a560009c54354b4
           <li><a href=\"{{ path('oc_platform_home') }}\">Accueil</a></li>
           <li><a href=\"{{ path('oc_advert_add') }}\">Ajouter un produit</a></li>
           <li><a href=\"{{ path('account') }}\">Mon compte</a></li>
+          <li><a href=\"{{ path('connexion') }}\">Se connecter</a></li>
+          <li><a href=\"{{ path('create_account') }}\">Créer un compte</a></li>
         </ul>
 
         <h4>Derniers produits</h4>
@@ -284,6 +294,6 @@ class __TwigTemplate_029a9bf452c4a618c5ab3d499e1d08d5860a7c38d653a560009c54354b4
   {% endblock %}
 
 </body>
-</html>", "layoutgeneral.html.twig", "C:\\wamp64\\www\\symfonyecommerce\\Symfony_e-commerce\\templates\\layoutgeneral.html.twig");
+</html>", "layoutgeneral.html.twig", "C:\\wamp64\\www\\evalsymfony\\Symfony_e-commerce\\templates\\layoutgeneral.html.twig");
     }
 }

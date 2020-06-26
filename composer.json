@@ -33,8 +33,6 @@
     },
     "minimum-stability": "dev",
     "prefer-stable" : true,
-    "minimum-stability": "dev",
-    "prefer-stable" : true,
     "require-dev": {
         "symfony/maker-bundle": "^1.19",
         "symfony/profiler-pack": "*",

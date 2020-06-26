@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
-=======
 # config/routes.yaml
 
 oc_advert_index:
@@ -42,4 +37,3 @@ oc_advert_edit:
 oc_advert_menu:
     path:       /menu
     controller: App\Controller\AdvertController::menuAction
->>>>>>> f69f5ee33780f4aa43f67c7e47d416be5b5b7a35

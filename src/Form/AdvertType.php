@@ -11,10 +11,9 @@ use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-//magnifique classe
+
 class AdvertType extends AbstractType
 {
-    //magnifique fonction
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -23,7 +22,7 @@ class AdvertType extends AbstractType
         ->add('author',    TextType::class)
         ->add('content',   TextareaType::class)
         ->add('published', CheckboxType::class, array('required' => false))
-        ->add('image',     ImageType::class)
+        ->add('image',     ImageType::class, array('required' => false))
         ->add('save',      SubmitType::class);
     }
 

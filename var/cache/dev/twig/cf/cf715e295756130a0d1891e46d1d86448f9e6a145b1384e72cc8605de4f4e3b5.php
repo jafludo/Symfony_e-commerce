@@ -66,7 +66,7 @@ class __TwigTemplate_93a77624301fb6f81d7f280c77585a09e0b58f3c69c27095827d82baf70
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
         // line 6
-        echo "  Ajouter une annonce - ";
+        echo "  Ajouter un produit - ";
         $this->displayParentBlock("title", $context, $blocks);
         echo "
 ";
@@ -138,7 +138,7 @@ class __TwigTemplate_93a77624301fb6f81d7f280c77585a09e0b58f3c69c27095827d82baf70
 {% extends \"layoutbundle.html.twig\" %}
 
 {% block title %}
-  Ajouter une annonce - {{ parent() }}
+  Ajouter un produit - {{ parent() }}
 {% endblock %}
 
 {% block ocplatform_body %}
@@ -154,6 +154,6 @@ class __TwigTemplate_93a77624301fb6f81d7f280c77585a09e0b58f3c69c27095827d82baf70
     </a>
   </p>
 
-{% endblock %}", "Advert/add.html.twig", "C:\\wamp64\\www\\symfonyecommerce\\Symfony_e-commerce\\templates\\Advert\\add.html.twig");
+{% endblock %}", "Advert/add.html.twig", "C:\\wamp64\\www\\evalsymfony\\Symfony_e-commerce\\templates\\Advert\\add.html.twig");
     }
 }

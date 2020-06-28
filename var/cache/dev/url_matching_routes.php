@@ -13,7 +13,11 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/utilisateur' => [[['_route' => 'utilisateur', '_controller' => 'App\\Controller\\UtilisateurController::index'], null, null, null, false, false, null]],
+        '/connexion' => [
+            [['_route' => 'security_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null],
+            [['_route' => 'connexion', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null],
+        ],
+        '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/home' => [
             [['_route' => 'oc_advert_index', '_controller' => 'App\\Controller\\AdvertController::index'], null, null, null, false, false, null],
             [['_route' => 'oc_platform_home'], null, null, null, false, false, null],
@@ -22,8 +26,7 @@ return [
         '/add' => [[['_route' => 'oc_advert_add', '_controller' => 'App\\Controller\\AdvertController::add'], null, null, null, false, false, null]],
         '/menu' => [[['_route' => 'oc_advert_menu', '_controller' => 'App\\Controller\\AdvertController::menuAction'], null, null, null, false, false, null]],
         '/account' => [[['_route' => 'account', '_controller' => 'App\\Controller\\AccountController::index'], null, null, null, false, false, null]],
-        '/connexion' => [[['_route' => 'connexion', '_controller' => 'App\\Controller\\AccountController::connexion'], null, null, null, false, false, null]],
-        '/register' => [[['_route' => 'create_account', '_controller' => 'App\\Controller\\AccountController::register'], null, null, null, false, false, null]],
+        '/register' => [[['_route' => 'create_account', '_controller' => 'App\\Controller\\SecurityController::register'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -59,7 +62,7 @@ return [
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         183 => [[['_route' => 'oc_platform_view', '_controller' => 'App\\Controller\\AdvertController::view'], ['id'], null, null, false, true, null]],
-        204 => [[['_route' => 'oc_account_view', '_controller' => 'App\\Controller\\AccountController::view'], ['id'], null, null, false, true, null]],
+        204 => [[['_route' => 'oc_account_view', '_controller' => 'App\\Controller\\SecurityController::view'], ['id'], null, null, false, true, null]],
         226 => [[['_route' => 'oc_advert_delete', '_controller' => 'App\\Controller\\AdvertController::delete'], ['id'], null, null, false, true, null]],
         245 => [
             [['_route' => 'oc_advert_edit', '_controller' => 'App\\Controller\\AdvertController::edit'], ['id'], null, null, false, true, null],

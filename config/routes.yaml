@@ -44,12 +44,12 @@ account:
 
 connexion:
     path:       /connexion
-    controller: App\Controller\AccountController::connexion
+    controller: App\Controller\SecurityController::login
 
 create_account:
     path:       /register
-    controller: App\Controller\AccountController::register
+    controller: App\Controller\SecurityController::register
 
 oc_account_view:
     path:       /viewuser/{id}
-    controller: App\Controller\AccountController::view
+    controller: App\Controller\SecurityController::view

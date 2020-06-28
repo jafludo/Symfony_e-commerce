@@ -90,7 +90,7 @@ class __TwigTemplate_4812cf2232fbc9e7b090c4859055dd2ae4cf9829a33ce1b2dd29db95c86
 
         // line 9
         echo "
-  <h3>Annonce supprimée</h3>
+  <h3>Produit supprimé</h3>
 
   <p>
     <a href=\"";
@@ -136,7 +136,7 @@ class __TwigTemplate_4812cf2232fbc9e7b090c4859055dd2ae4cf9829a33ce1b2dd29db95c86
 
 {% block ocplatform_body %}
 
-  <h3>Annonce supprimée</h3>
+  <h3>Produit supprimé</h3>
 
   <p>
     <a href=\"{{ path('oc_platform_home') }}\" class=\"btn btn-default\">
@@ -144,6 +144,6 @@ class __TwigTemplate_4812cf2232fbc9e7b090c4859055dd2ae4cf9829a33ce1b2dd29db95c86
       Retour à la liste
     </a>
   </p>
-{% endblock %}", "Advert/delete.html.twig", "C:\\wamp64\\www\\symfonyecommerce\\Symfony_e-commerce\\templates\\Advert\\delete.html.twig");
+{% endblock %}", "Advert/delete.html.twig", "C:\\wamp64\\www\\evalsymfony\\Symfony_e-commerce\\templates\\Advert\\delete.html.twig");
     }
 }

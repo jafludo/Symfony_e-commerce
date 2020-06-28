@@ -156,6 +156,6 @@ class __TwigTemplate_60a1689e112a94fe7c1a44bd6fb3f91811bd81da6def3e49429b0f43e77
     <h2>{{ messages[about].title }}</h2>
     <p>{{ messages[about].message }}</p>
 {% endblock %}
-", "@WebProfiler/Profiler/info.html.twig", "C:\\wamp64\\www\\symfonyecommerce\\Symfony_e-commerce\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\info.html.twig");
+", "@WebProfiler/Profiler/info.html.twig", "C:\\wamp64\\www\\evalsymfony\\Symfony_e-commerce\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\info.html.twig");
     }
 }

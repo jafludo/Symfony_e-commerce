@@ -185,6 +185,6 @@ class __TwigTemplate_96ebf792b8a84c037317bdcfb7c489bc0a50397972b0f1e8a364d8e072e
     {% endfor %}
   </ul>
 
-{% endblock %}", "account.html.twig", "C:\\wamp64\\www\\symfonyecommerce\\Symfony_e-commerce\\templates\\account.html.twig");
+{% endblock %}", "account.html.twig", "C:\\wamp64\\www\\evalsymfony\\Symfony_e-commerce\\templates\\account.html.twig");
     }
 }

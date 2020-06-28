@@ -5,11 +5,18 @@ namespace App\Entity;
 use App\Repository\UtilisateurRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=UtilisateurRepository::class)
+ * @UniqueEntity(
+ *  fields={"email"},
+ *  message="L'email que vous avez entré a déjà été utilisé."
+ * )
  */
-class Utilisateur
+class Utilisateur implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -30,10 +37,12 @@ class Utilisateur
 
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\Email()
      */
-    private $Email;
+    private $email;
 
     /**
+     * @var string The hashed password
      * @ORM\Column(type="string", length=30)
      */
     private $password;
@@ -83,12 +92,12 @@ class Utilisateur
 
     public function getEmail(): ?string
     {
-        return $this->Email;
+        return $this->email;
     }
 
-    public function setEmail(string $Email): self
+    public function setEmail(string $email): self
     {
-        $this->Email = $Email;
+        $this->email = $email;
 
         return $this;
     }
@@ -133,4 +142,8 @@ class Utilisateur
 
         return $this;
     }
+
+    public function getSalt()  {}
+    public function getUsername()   {}
+    public function eraseCredentials()  {}
 }

@@ -90,7 +90,7 @@ class __TwigTemplate_0486f8d78e0caf30b2ff837044b920d3404e962c19eb8f7a2278639973a
 
         // line 10
         echo "
-  <h2>Modifier une annonce</h2>
+  <h2>Modifier un produit</h2>
 
   ";
         // line 13
@@ -98,8 +98,8 @@ class __TwigTemplate_0486f8d78e0caf30b2ff837044b920d3404e962c19eb8f7a2278639973a
         echo "
 
   <p>
-    Vous éditez une annonce déjà existante, merci de ne pas changer
-    l'esprit général de l'annonce déjà publiée.
+    Vous éditez un produit déjà existant, merci de ne pas changer
+    l'esprit général du produit déjà publiée.
   </p>
 
   <p>
@@ -108,7 +108,7 @@ class __TwigTemplate_0486f8d78e0caf30b2ff837044b920d3404e962c19eb8f7a2278639973a
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("oc_platform_view", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["advert"]) || array_key_exists("advert", $context) ? $context["advert"] : (function () { throw new RuntimeError('Variable "advert" does not exist.', 21, $this->source); })()), "id", [], "any", false, false, false, 21)]), "html", null, true);
         echo "\" class=\"btn btn-default\">
       <i class=\"glyphicon glyphicon-chevron-left\"></i>
-      Retour à l'annonce
+      Retour au produit
     </a>
   </p>
 
@@ -148,22 +148,22 @@ class __TwigTemplate_0486f8d78e0caf30b2ff837044b920d3404e962c19eb8f7a2278639973a
 
 {% block ocplatform_body %}
 
-  <h2>Modifier une annonce</h2>
+  <h2>Modifier un produit</h2>
 
   {{ include(\"Advert/form.html.twig\") }}
 
   <p>
-    Vous éditez une annonce déjà existante, merci de ne pas changer
-    l'esprit général de l'annonce déjà publiée.
+    Vous éditez un produit déjà existant, merci de ne pas changer
+    l'esprit général du produit déjà publiée.
   </p>
 
   <p>
     <a href=\"{{ path('oc_platform_view', {'id': advert.id}) }}\" class=\"btn btn-default\">
       <i class=\"glyphicon glyphicon-chevron-left\"></i>
-      Retour à l'annonce
+      Retour au produit
     </a>
   </p>
 
-{% endblock %}", "Advert/edit.html.twig", "C:\\wamp64\\www\\symfonyecommerce\\Symfony_e-commerce\\templates\\Advert\\edit.html.twig");
+{% endblock %}", "Advert/edit.html.twig", "C:\\wamp64\\www\\evalsymfony\\Symfony_e-commerce\\templates\\Advert\\edit.html.twig");
     }
 }
